@@ -48,3 +48,36 @@ export const FOOTER_LINKS = [
     ],
   },
 ] as const;
+
+export const CAROUSEL_CONTENT = [
+  {
+    src: "/assets/images/epi/epi.png",
+    alt: "Api testing app",
+    path: '/epi'
+  },
+  {
+    src: "/assets/images/Knauf/Knauf1.png",
+    alt: "Created digital products for Knauf Digital",
+    path: '/Knauf'
+  },
+  {
+    src: "/assets/images/audi/audi1.png",
+    alt: "White Label e-commerce app with Adobe Experince manager",
+    path: '/audi'
+  },
+  {
+    src: "/assets/images/diconium/diconium.png",
+    alt: "Diconium Digital Solution 2019",
+    path: '/diconium'
+  },
+  {
+    src: "/assets/images/vgg/vgg.png",
+    alt: "Built apps for VGG startups",
+    path: '/vgg'
+  },
+  {
+    src: "/assets/images/nairabox/nairabox.png",
+    alt: "Internship at Nairabox",
+    path: '/nairabox'
+  },
+] as const
