@@ -4,11 +4,9 @@ import PageAnimation from '@/components/PageAnimation';
 
 export default function ContactPage() {
   return (
-    <PageAnimation>
-      <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900">
+      <div className="min-h-screen">
         <ContactHero />
         <ContactForm />
       </div>
-    </PageAnimation>
   );
 }

@@ -13,8 +13,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed w-full z-50 px-4 py-2 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <nav className="sticky top-0 w-full z-50 bg-white/40 dark:bg-neutral-900/80 backdrop-blur-lg">
+      <div className="w-[calc(100%-2rem)] m-auto">
+      <div className="mx-auto flex justify-between items-center">
           <Link href="/" className="text-2xl font-medium">
             <MichaelLogo />
           </Link>
@@ -46,6 +47,7 @@ export default function Navbar() {
             </div>
           </button>
         </div>
+      </div>
       </nav>
 
       <MobileMenu

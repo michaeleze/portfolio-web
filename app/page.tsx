@@ -1,11 +1,10 @@
-
+import { Carousel } from '@/components/Carousel';
 import Hero from '@/components/home/Hero';
-import PageAnimation from '@/components/PageAnimation';
-
 export default function Home() {
   return (
-    <PageAnimation>
+    <div className="h-full flex gap-4 justify-around flex-col md:flex-row">
       <Hero />
-    </PageAnimation>
+        <Carousel />
+    </div>
   );
 }

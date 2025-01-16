@@ -7,6 +7,7 @@ import { X } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/constants';
 
 import MichaelLogo from '@/components/Logo';
+import { FooterSocial } from '../Footer/FooterSocial';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -36,7 +37,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         >
           <div className="flex justify-between items-center p-4">
             <Link href="/" className="text-2xl font-medium" onClick={onClose}>
-            <MichaelLogo />
+              <MichaelLogo />
             </Link>
             <button
               onClick={onClose}
@@ -67,6 +68,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   </Link>
                 </motion.div>
               ))}
+            </div>
+            <div className='justify-self-end'>
+              <FooterSocial />
             </div>
           </nav>
         </motion.div>

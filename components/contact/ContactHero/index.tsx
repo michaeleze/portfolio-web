@@ -4,7 +4,15 @@ import { motion } from 'framer-motion';
 import { contactContent } from '@/lib/content/contact';
 import { ContactInfo } from './ContactInfo';
 
-export function ContactHero() {
+interface ContactHeroProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export function ContactHero({
+  title = contactContent.hero.title,
+  subtitle = contactContent.hero.subtitle
+}: ContactHeroProps) {
   return (
     <section className="pt-32 pb-16 px-4">
       <div className="max-w-3xl mx-auto text-center">
@@ -13,7 +21,7 @@ export function ContactHero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-6xl font-bold mb-6"
         >
-          {contactContent.hero.title}
+          {title}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -21,7 +29,7 @@ export function ContactHero() {
           transition={{ delay: 0.2 }}
           className="text-xl text-neutral-600 dark:text-neutral-400"
         >
-          {contactContent.hero.subtitle}
+          {subtitle}
         </motion.p>
         <ContactInfo />
       </div>

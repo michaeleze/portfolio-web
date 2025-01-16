@@ -10,7 +10,7 @@ export default function ThemeSwitcher() {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="fixed bottom-8 right-8 p-3 rounded-full bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100"
+      className="fixed bottom-15 left-8 p-3 rounded-full bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100"
     >
       {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
     </motion.button>

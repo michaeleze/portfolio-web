@@ -64,9 +64,9 @@ export const servicesContent = {
 
 export const homeContent = {
   hero: {
-    title: 'Lead Software Engineer',
-    subtitle: 'Crafting exceptional digital experiences through innovative solutions and user-centric design',
-    cta: 'View Projects'
+    title: 'Software Engineer',
+    subtitle: 'I’m {highly_technical} and while (I’m ≠ engineer) I know my way /around & can speak “fluently” with you; I built (this.site) from scratch + (this.one) && (this.too).',
+    caption: 'Lead'
   },
   featured: {
     title: 'Featured Projects',

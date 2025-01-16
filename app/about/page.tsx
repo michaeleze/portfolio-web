@@ -7,12 +7,12 @@ import PageAnimation from '@/components/PageAnimation';
 
 export default function AboutPage() {
   return (
-    <PageAnimation>
+    <>
       <AboutHero />
       <AboutStory />
       <AboutExperience />
       <TechStack />
       <Expertise />
-    </PageAnimation>
+    </>
   );
 }
