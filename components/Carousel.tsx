@@ -6,8 +6,8 @@ import { motion } from "framer-motion"
 
 const slides = [
   {
-    src: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=500&q=80",
-    alt: "Assorted small cactus plants in terra cotta pots"
+    src: "/Audi1.png",
+    alt: "White Label e-commerce app with Adobe Experince manager"
   },
   {
     src: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=500&q=80",
