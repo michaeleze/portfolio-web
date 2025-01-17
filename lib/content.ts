@@ -64,7 +64,7 @@ export const servicesContent = {
 
 export const homeContent = {
   hero: {
-    title: 'Hello!',
+    title: '{Hello}',
     subtitle: 'I am a highly technical <Software_Engineer /> with 9+ years experience. I care about crafting beautiful and exceptional digital experiences through innovative .',
     caption: 'Software Engineer & UX Expert'
   },

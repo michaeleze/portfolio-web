@@ -1,13 +1,13 @@
 'use client';
 
 import '@/theme/globals.css';
-import { Inter } from 'next/font/google';
+import { Syne } from 'next/font/google';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { Navbar, Footer } from '@/components/layout';
 import PageAnimation from '@/components/PageAnimation';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 
-const inter = Inter({ subsets: ['latin'] });
+const syne = Syne({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={syne.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

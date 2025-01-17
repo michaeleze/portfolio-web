@@ -5,7 +5,7 @@ import { SOCIAL_LINKS } from '@/lib/constants';
 
 export function FooterSocial() {
   return (
-    <div className="flex space-x-6">
+    <div className="flex space-x-6 basis-[15%]">
       {SOCIAL_LINKS.map((social) => {
         const Icon = social.icon;
         return (
