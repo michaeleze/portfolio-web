@@ -137,15 +137,15 @@
     --red-800: 5.62deg 99.16% 75%;
     --red-900: 5.62deg 99.16% 85%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   body, html {
     height: 100%;
   }
@@ -171,4 +171,5 @@
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #c0a0b9;
   }
+
 }

@@ -30,11 +30,11 @@ export default function Hero() {
           <span className="uppercase text-sm md:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl">
             {homeContent.hero.caption}
           </span>
-          <h1 className="font-bold leading-none capitalize text-[6rem] md:text-[8rem] bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-600 dark:from-neutral-100 dark:to-neutral-400">
+          <h1 className="font-bold leading-none capitalize text-[6rem] md:text-[8.5rem] bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-600 dark:from-neutral-100 dark:to-neutral-400">
             {homeContent.hero.title}
           </h1>
         </div>
-        <p className="font-light text-2xl pr-4 text-neutral-500 dark:text-neutral-400 max-w-xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-600 dark:from-neutral-100 dark:to-neutral-400">
+        <p className="font-light text-3xl pr-4 text-neutral-500 dark:text-neutral-400 max-w-xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-600 dark:from-neutral-100 dark:to-neutral-400">
           {homeContent.hero.subtitle}
         </p>
         <FooterSocial />

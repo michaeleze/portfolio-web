@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { aboutContent } from '@/lib/content/about';
 import { ExpertiseTitle } from './ExpertiseTitle';
 import { ExpertiseCategory } from './ExpertiseCategory';
+import { expertiseContent } from '@/lib/content/expertise';
+import { skillsContent } from '@/lib/content/skills';
 
 export function Expertise() {
   return (
@@ -14,13 +16,13 @@ export function Expertise() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <ExpertiseTitle title={aboutContent.expertise.title} />
+          <ExpertiseTitle title={expertiseContent.title} />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {aboutContent.expertise.categories.map((category, index) => (
+            {skillsContent.categories.map((category, index) => (
               <ExpertiseCategory
                 key={category.title}
                 title={category.title}
-                items={category.items}
+                items={category?.items}
                 icon={category.icon}
                 index={index}
               />

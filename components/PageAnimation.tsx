@@ -8,24 +8,26 @@ interface PageAnimationProps {
 }
 
 export const pageVariants: Variants = {
-  initial: { opacity: 0, filter: 'blur(10px)' },
+  initial: { opacity: 0, scale: 0.8, filter: 'blur(10px)' },
   animate: {
     opacity: 1,
+    scale: 1,
     filter: 'blur(0px)',
     transition: {
-      duration: 1.2,
+      duration: 1,
       ease: cubicBezier(0.43, 0.13, 0.23, 0.96)
     }
   },
   exit: {
     opacity: 0,
+    scale: 0.8,
+    filter: 'blur(10px)',
     transition: {
-      duration: 0.8,
+      duration: 1,
       ease: cubicBezier(0.43, 0.13, 0.23, 0.96)
     }
   }
 }
-
 
 const PageAnimation: React.FC<PageAnimationProps> = ({ children }) => {
   return (

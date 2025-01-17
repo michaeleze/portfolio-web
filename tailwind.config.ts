@@ -9,7 +9,16 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: defaultConfig,
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    function ({ addUtilities }) {
+      addUtilities({
+        '.mask-gradient-to-b': {
+          maskImage: 'linear-gradient(transparent, black)',
+        },
+      });
+    },
+  ],
 };
 
 export default config;

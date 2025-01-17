@@ -27,7 +27,7 @@ export const defaultConfig = {
     animation: {
       'accordion-down': 'accordion-down 0.2s ease-out',
       'accordion-up': 'accordion-up 0.2s ease-out',
-      scroll: 'scroll 20s ease infinite',
+      scroll: 'scroll 5s ease infinite',
     },
     keyframes: {
       scroll: {
@@ -38,6 +38,9 @@ export const defaultConfig = {
           transform: "translateY(calc(-100% + 450px))"
         }
       }
-    }
+    },
+    maskImage: {
+      'gradient-to-b': 'linear-gradient(transparent, white)',
+    },
   },
 }

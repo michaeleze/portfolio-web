@@ -33,7 +33,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-neutral-50 dark:bg-neutral-900 z-50"
+          className="fixed inset-0 bg-neutral-50 dark:bg-neutral-900 z-50 bg-white/40 dark:bg-neutral-900/80 backdrop-blur-lg"
         >
           <div className="flex justify-between items-center p-4">
             <Link href="/" className="text-2xl font-medium" onClick={onClose}>

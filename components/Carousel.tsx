@@ -23,15 +23,15 @@ export function Carousel() {
       variants={galleryVariants}
       initial="initial"
       animate="animate"
-      className="text-bold capitalize before:content-['Projects and Companies >>>'] max-h-[800px] overflow-x-auto md:overflow-y-auto rounded-xl border-0 scroll-smooth focus:scroll-auto scrollbar basis-[60%]"
+      className="flex text-bold capitalize before:content-['Projects and Companies >>>'] max-h-[800px] overflow-x-auto overflow-y-hidden md:overflow-y-auto rounded-xl border-0 scroll-smooth focus:scroll-auto scrollbar mask-gradient-to-b"
     >
-      <div className="animate-scroll flex flex-row md:flex-col gap-6">
+      <div className="md:animate-scroll flex flex-row md:flex-col gap-6">
         {CAROUSEL_CONTENT.map((slide, index) => (
-          <Card key={index} className="overflow-hidden rounded-xl border-0 flex-shrink-0 snap-center shadow-none ">
-            <CardContent className="p-0 overflow-hidden h-[450px] w-[400px] md:w-full">
+          <Card key={index} className="rounded-xl border-0 flex-shrink-0 snap-center shadow-none bg-blue-500 ">
+            <CardContent className="p-0 overflow-hidden h-[450px] w-[400px] md:w-full overflow-hidden">
               <img
-                src={slide.src || "/placeholder.svg"}
-                alt={slide.alt}
+                src={slide?.src || "/placeholder.svg"}
+                alt={slide?.alt}
                 className="aspect-auto object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
               />
             </CardContent>
