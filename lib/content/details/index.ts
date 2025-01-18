@@ -14,7 +14,7 @@ export const mockData = {
       ]
     },
     credits: {
-      title: "Credits",
+      title: "Live Site",
       content: [
         "Photography: Jane Doe",
         "Design: John Smith",

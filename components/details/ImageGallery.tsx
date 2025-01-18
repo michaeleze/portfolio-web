@@ -25,16 +25,16 @@ const galleryVariants: Variants = {
 export function ImageGallery({ images }: ImageGalleryProps) {
   return (
     <motion.div
-      className="w-full overflow-x-auto mb-20 snap-x snap-mandatory scroll-smooth focus:scroll-auto scrollbar"
+      className="w-full  overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth focus:scroll-auto scrollbar max-h-[450px] bg-inherit rounded-xl"
       variants={galleryVariants}
       initial="initial"
       animate="animate"
     >
-      <div className="flex w-full">
+      <div className="flex w-full rounded-xl">
         {images.map((image, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-full md:w-1/2 snap-start"
+            className="flex-shrink-0 w-full md:w-1/2 snap-start "
           >
             <div className="relative aspect-[4/3] m-2">
               <Image

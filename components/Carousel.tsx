@@ -29,7 +29,7 @@ export function Carousel({ items = CAROUSEL_CONTENT }: { items?: typeof CAROUSEL
       <div className="animate-scroll-right md:animate-scroll-down flex flex-row md:flex-col gap-6">
         {CAROUSEL_CONTENT.map((slide, index) => (
           <Link key={index} href={slide.path}>
-            <Card className="rounded-xl border-0 flex-shrink-0 snap-center shadow-none bg-blue-500 mask-gradient-to-b hover:mask-none">
+            <Card className="rounded-xl border-0 flex-shrink-0 snap-center shadow-none bg-blue-500 opacity-30 hover:opacity-100 hover:grayscale-0 grayscale">
               <CardContent className="p-0 overflow-hidden h-[450px] w-[400px] md:w-full overflow-hidden">
                 <Image
                   src={slide.src || "/placeholder.svg"}
