@@ -16,6 +16,9 @@ const config: Config = {
         '.mask-gradient-to-b': {
           maskImage: 'linear-gradient(transparent, black)',
         },
+        '.mask-none': {
+          maskImage: 'none',
+        }
       });
     },
   ],

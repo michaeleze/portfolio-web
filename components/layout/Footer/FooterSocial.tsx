@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion';
 import { SOCIAL_LINKS } from '@/lib/constants';
 
-export function FooterSocial() {
+export function FooterSocial({socials = SOCIAL_LINKS }: { socials?: typeof SOCIAL_LINKS }) {
   return (
     <div className="flex space-x-6 basis-[15%]">
-      {SOCIAL_LINKS.map((social) => {
+      {socials.map((social) => {
         const Icon = social.icon;
         return (
           <motion.a

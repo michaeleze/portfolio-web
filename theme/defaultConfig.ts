@@ -27,15 +27,17 @@ export const defaultConfig = {
     animation: {
       'accordion-down': 'accordion-down 0.2s ease-out',
       'accordion-up': 'accordion-up 0.2s ease-out',
-      scroll: 'scroll 5s ease infinite',
+      'scroll-down': 'scrollDown 20s linear infinite',
     },
     keyframes: {
-      scroll: {
-        "0%": {
-          transform: "translateY(0)"
-        },
-        "100%": {
-          transform: "translateY(calc(-100% + 450px))"
+      scrollDown: {
+        to: {
+          transform: "translateY(-50%)"
+        }
+      },
+      scrollRight: {
+        to: {
+          transform: "translateX(50%)"
         }
       }
     },

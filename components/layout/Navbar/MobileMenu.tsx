@@ -50,7 +50,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </button>
           </div>
 
-          <nav className="flex flex-col items-center justify-center h-[calc(100vh-88px)]">
+          <nav className="flex flex-col items-center justify-around h-[calc(100vh-88px)]">
             <div className="space-y-8 text-center">
               {NAV_LINKS.map((link) => (
                 <motion.div

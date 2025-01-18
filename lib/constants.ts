@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, } from 'lucide-react';
 
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -15,7 +15,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: 'Twitter',
-    href: 'https://twitter.com/michaeleze',
+    href: 'https://twitter.com/michaeleze_dev',
     icon: Twitter,
   },
   {
@@ -25,7 +25,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: 'Email',
-    href: 'mailto:michael.eze@example.com',
+    href: 'mailto:michael.eze3@gmail.com',
     icon: Mail,
   },
 ] as const;
@@ -53,27 +53,27 @@ export const CAROUSEL_CONTENT = [
   {
     src: "/assets/images/epi/epi.png",
     alt: "Api testing app",
-    path: '/epi'
+    path: 'details/epi'
   },
   {
     src: "/assets/images/Knauf/Knauf1.png",
     alt: "Created digital products for Knauf Digital",
-    path: '/Knauf'
+    path: 'details/Knauf'
   },
   {
-    src: "/assets/images/audi/audi1.png",
+    src: "/assets/images/audi/audi2.png",
     alt: "White Label e-commerce app with Adobe Experince manager",
-    path: '/audi'
+    path: 'details/audi'
   },
   {
     src: "/assets/images/diconium/diconium.png",
     alt: "Diconium Digital Solution 2019",
-    path: '/diconium'
+    path: 'details/diconium'
   },
   {
     src: "/assets/images/vgg/vgg.png",
     alt: "Built apps for VGG startups",
-    path: '/vgg'
+    path: 'details/vgg'
   },
   {
     src: "/assets/images/nairabox/nairabox.png",

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { cubicBezier, motion, Variants } from "framer-motion";
 import { CAROUSEL_CONTENT } from "@/lib/constants";
+import Link from "next/link";
 
 const galleryVariants: Variants = {
   initial: { opacity: 0 },
@@ -11,31 +12,35 @@ const galleryVariants: Variants = {
     opacity: 1,
     transition: {
       duration: 1.2,
-      delay:0.5,
+      delay: 0.5,
       ease: cubicBezier(0.645, 0.045, 0.355, 1)
     }
   }
 }
 
-export function Carousel() {
+export function Carousel({ items = CAROUSEL_CONTENT }: { items?: typeof CAROUSEL_CONTENT }) {
   return (
     <motion.div
       variants={galleryVariants}
       initial="initial"
       animate="animate"
-      className="flex text-bold capitalize before:content-['Projects and Companies >>>'] max-h-[800px] overflow-x-auto overflow-y-hidden md:overflow-y-auto rounded-xl border-0 scroll-smooth focus:scroll-auto scrollbar mask-gradient-to-b"
+      className="bg-inherit snap-x snap-mandatory md:snap-y scroll-text-bold capitalize md:h-[800px] overflow-x-auto overflow-y-hidden md:overflow-y-auto rounded-xl border-0 scroll-smooth focus:scroll-auto scrollbar mask-gradient-to-b"
     >
-      <div className="md:animate-scroll flex flex-row md:flex-col gap-6">
+      <div className="animate-scroll-right md:animate-scroll-down flex flex-row md:flex-col gap-6">
         {CAROUSEL_CONTENT.map((slide, index) => (
-          <Card key={index} className="rounded-xl border-0 flex-shrink-0 snap-center shadow-none bg-blue-500 ">
-            <CardContent className="p-0 overflow-hidden h-[450px] w-[400px] md:w-full overflow-hidden">
-              <img
-                src={slide?.src || "/placeholder.svg"}
-                alt={slide?.alt}
-                className="aspect-auto object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
-              />
-            </CardContent>
-          </Card>
+          <Link key={index} href={slide.path}>
+            <Card className="rounded-xl border-0 flex-shrink-0 snap-center shadow-none bg-blue-500 mask-gradient-to-b hover:mask-none">
+              <CardContent className="p-0 overflow-hidden h-[450px] w-[400px] md:w-full overflow-hidden">
+                <Image
+                  src={slide.src || "/placeholder.svg"}
+                  alt={slide.alt}
+                  width={900}
+                  height={900}
+                  className="aspect-auto object-cover object-left h-full w-full transition-transform duration-500 group-hover:scale-105 rounded-xl"
+                />
+              </CardContent>
+            </Card>
+          </Link>
         ))}
       </div>
     </motion.div>
