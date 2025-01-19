@@ -16,7 +16,7 @@ interface ProjectsGridProps {
 
 export function ProjectsGrid({ currentSlug }: ProjectsGridProps) {
   return (
-    <div className="flex flex-row flex-wrap gap-2 md:gap-4 p-4 md:p-8 max-w-screen-2xl mx-auto bg-[#f7f4ed] rounded-[1.2rem] dark:bg-neutral-800 dark:text-neutral-100">
+    <div className="flex flex-row flex-wrap gap-2 md:gap-4 p-4 md:p-8 max-w-screen-2xl mx-auto bg-[#f7f4ed] dark:bg-neutral-800 dark:text-neutral-100 rounded-[1.2rem] ">
       {projects.map((project) => (
         <motion.div
           key={project.slug}
@@ -33,7 +33,7 @@ export function ProjectsGrid({ currentSlug }: ProjectsGridProps) {
                 currentSlug === project.slug ? 'text-foreground' : 'text-muted-foreground'
               }`}
             >
-              {project.name}
+              {project.name} |
             </h2>
           </Link>
         </motion.div>

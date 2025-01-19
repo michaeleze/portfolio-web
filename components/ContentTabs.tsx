@@ -12,7 +12,7 @@ interface ContentTabsProps {
 export function ContentTabs({ tabs }: ContentTabsProps) {
   return (
     <Tabs defaultValue="services" className="w-full">
-      <TabsList className="grid w-full grid-cols-2 rounded-full">
+      <TabsList className="grid w-full grid-cols-2 rounded-full bg-[#f7f4ed] dark:bg-neutral-800 dark:text-neutral-100">
         {Object.keys(tabs).map((tabKey) => (
           <TabsTrigger key={tabKey} value={tabKey} className="rounded-full text-xs md:text-sm">
             {tabs[tabKey].title}
@@ -31,4 +31,3 @@ export function ContentTabs({ tabs }: ContentTabsProps) {
     </Tabs>
   );
 }
-

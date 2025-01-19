@@ -15,7 +15,7 @@ export default function Navbar() {
     <>
       <nav className="">
       <div className="w-[calc(100%-2rem)] m-auto">
-      <div className="mx-auto grid grid-cols-2 justify-between items-center">
+      <div className="mx-auto grid grid-cols-2 justify-around items-center">
           <Link href="/" className="text-2xl font-medium">
             <MichaelLogo />
           </Link>
@@ -36,24 +36,30 @@ export default function Navbar() {
               </motion.div>
             ))}
           </div>
-
-          <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="md:hidden p-2 justify-self-end"
-            aria-label="Open menu"
-          >
-            <div className="border border-neutral-900 dark:border-neutral-100 p-2">
-              <Menu size={24} />
-            </div>
-          </button>
+          {
+            !isMobileMenuOpen && (
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden px-2 justify-self-end"
+                aria-label="Open menu"
+              >
+                <div className="border border-neutral-900 dark:border-neutral-100 p-2">
+                  <Menu size={24} />
+                </div>
+              </button>
+            )
+          }
         </div>
       </div>
       </nav>
-
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
+      {
+        isMobileMenuOpen && (
+          <MobileMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          />
+        )
+      }
     </>
   );
 }

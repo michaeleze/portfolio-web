@@ -33,9 +33,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-neutral-50 dark:bg-neutral-900 z-50 bg-white/40 dark:bg-neutral-900/80 backdrop-blur-lg"
+          className="fixed inset-0 z-100 bg-white/40 dark:bg-neutral-900/80 backdrop-blur-lg"
         >
-          <div className="flex justify-between items-center p-4">
+          <div className="flex justify-between items-center px-2">
             <Link href="/" className="text-2xl font-medium" onClick={onClose}>
               <MichaelLogo />
             </Link>
@@ -50,7 +50,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </button>
           </div>
 
-          <nav className="flex flex-col items-center justify-around h-[calc(100vh-88px)]">
+          <nav className="inset-0 bg-white/80 bg-neutral-50 dark:bg-neutral-900/80 backdrop-blur-xl flex flex-col items-center justify-around h-[calc(100vh-88px)]">
             <div className="space-y-8 text-center">
               {NAV_LINKS.map((link) => (
                 <motion.div
