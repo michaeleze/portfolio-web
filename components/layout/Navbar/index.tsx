@@ -13,45 +13,45 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="">
-      <div className="w-[calc(100%-2rem)] m-auto">
-      <div className="mx-auto grid grid-cols-2 justify-around items-center">
-          <Link href="/" className="text-2xl font-medium">
-            <MichaelLogo />
-          </Link>
-
-          <div className="hidden md:flex justify-between items-center">
-            {NAV_LINKS.map((link) => (
-              <motion.div
-                key={link.href}
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
-              >
-                <Link
-                  href={link.href}
-                  className="text-md font-medium text-black dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors before:content-[''] before:w-0 before:h-[2px] before:bg-neutral-900 dark:before:bg-neutral-100 before:transition-all before:duration-300 hover:before:w-full before:top-1/2 before:-translate-y-1/2 before:absolute"
-                >
-                  {link.label}
+      {
+        !isMobileMenuOpen && (
+          <nav className="">
+            <div className="md:w-[calc(100%-2svw)] m-auto">
+              <div className="mx-auto grid grid-cols-2 md:justify-around items-center">
+                <Link href="/" className="text-2xl font-medium">
+                  <MichaelLogo />
                 </Link>
-              </motion.div>
-            ))}
-          </div>
-          {
-            !isMobileMenuOpen && (
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden px-2 justify-self-end"
-                aria-label="Open menu"
-              >
-                <div className="border border-neutral-900 dark:border-neutral-100 p-2">
-                  <Menu size={24} />
+
+                <div className="hidden md:flex justify-between items-center">
+                  {NAV_LINKS.map((link) => (
+                    <motion.div
+                      key={link.href}
+                      whileHover={{ y: -2 }}
+                      whileTap={{ y: 0 }}
+                    >
+                      <Link
+                        href={link.href}
+                        className="text-md font-medium text-black dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors before:content-[''] before:w-0 before:h-[2px] before:bg-neutral-900 dark:before:bg-neutral-100 before:transition-all before:duration-300 hover:before:w-full before:top-1/2 before:-translate-y-1/2 before:absolute"
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.div>
+                  ))}
                 </div>
-              </button>
-            )
-          }
-        </div>
-      </div>
-      </nav>
+                <button
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="md:hidden px-2 justify-self-end"
+                  aria-label="Open menu"
+                >
+                  <div className="border border-neutral-900 dark:border-neutral-100 p-2">
+                    <Menu size={24} />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </nav>
+        )
+      }
       {
         isMobileMenuOpen && (
           <MobileMenu

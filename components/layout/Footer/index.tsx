@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { siteConfig } from '@/lib/content';
 import { FooterLinks } from './FooterLinks';
 import { FooterSocial } from './FooterSocial';
-import { FooterContact } from './FooterContact';
 
 export default function Footer() {
   return (

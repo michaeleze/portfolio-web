@@ -24,7 +24,7 @@ export function Carousel({ items = CAROUSEL_CONTENT }: { items?: typeof CAROUSEL
       variants={galleryVariants}
       initial="initial"
       animate="animate"
-      className="bg-inherit snap-x snap-mandatory md:snap-y scroll-text-bold capitalize md:h-[800px] overflow-x-auto overflow-y-hidden md:overflow-y-auto rounded-xl border-0 scroll-smooth focus:scroll-auto scrollbar mask-gradient-to-b"
+      className="bg-inherit snap-x snap-mandatory md:snap-y scroll-text-bold capitalize md:h-[800px] overflow-x-auto overflow-y-hidden md:overflow-y-auto rounded-xl border-0 scroll-smooth focus:scroll-auto scrollbar mask-gradient-to-b m-auto self-center justify-self-center"
     >
       <div className="animate-scroll-right md:animate-scroll-down flex flex-row md:flex-col gap-6">
         {CAROUSEL_CONTENT.map((slide, index) => (
