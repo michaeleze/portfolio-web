@@ -28,7 +28,7 @@ export default function Page({ params }: { params: Usable<{ slug: string }> }) {
   const isDeepSounds = slug === "deep-sounds"
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <>
       {isDeepSounds ? (
         <ProjectImages images={deepSoundsImages} />
       ) : (
@@ -42,6 +42,6 @@ export default function Page({ params }: { params: Usable<{ slug: string }> }) {
           <ImageGallery images={mockData.images} />
         </main>
       )}
-    </div>
+    </>
   )
 }
