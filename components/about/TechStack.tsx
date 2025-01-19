@@ -1,45 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { Code, Database, Cog } from 'lucide-react';
-
-const skillsContent = {
-  title: 'Technical Skills',
-  description: 'A comprehensive overview of my technical expertise and proficiency levels.',
-  categories: [
-    {
-      title: 'Frontend Development',
-      icon: Code,
-      skills: [
-        { name: 'React/Next.js', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Tailwind CSS', level: 90 },
-        { name: 'Vue.js', level: 85 },
-      ],
-    },
-    {
-      title: 'Backend Development',
-      icon: Database,
-      skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Python', level: 85 },
-        { name: 'GraphQL', level: 85 },
-        { name: 'PostgreSQL', level: 80 },
-      ],
-    },
-    {
-      title: 'DevOps & Tools',
-      icon: Cog,
-      skills: [
-        { name: 'AWS', level: 85 },
-        { name: 'Docker', level: 80 },
-        { name: 'Git', level: 90 },
-        { name: 'CI/CD', level: 85 },
-      ],
-    },
-  ],
-};
+import { skillsContent } from '@/lib/content/skills/index';
 
 export function TechStack() {
   return (
@@ -69,7 +31,7 @@ export function TechStack() {
                     <Icon className="w-6 h-6" />
                     <h3 className="text-xl font-semibold">{category.title}</h3>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {category.skills.map((skill, skillIndex) => (
                       <motion.div

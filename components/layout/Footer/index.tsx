@@ -7,7 +7,7 @@ import { FooterSocial } from './FooterSocial';
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-50 dark:bg-neutral-900 py-10">
+    <footer className="py-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
