@@ -13,14 +13,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 w-full z-50 bg-white/40 dark:bg-neutral-900/80 backdrop-blur-lg">
+      <nav className="">
       <div className="w-[calc(100%-2rem)] m-auto">
-      <div className="mx-auto flex justify-between items-center">
+      <div className="mx-auto grid grid-cols-2 justify-between items-center">
           <Link href="/" className="text-2xl font-medium">
             <MichaelLogo />
           </Link>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex justify-between items-center">
             {NAV_LINKS.map((link) => (
               <motion.div
                 key={link.href}
@@ -29,7 +29,7 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                  className="text-md font-medium text-black dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors before:content-[''] before:w-0 before:h-[2px] before:bg-neutral-900 dark:before:bg-neutral-100 before:transition-all before:duration-300 hover:before:w-full before:top-1/2 before:-translate-y-1/2 before:absolute"
                 >
                   {link.label}
                 </Link>
@@ -39,7 +39,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className="md:hidden p-2"
+            className="md:hidden p-2 justify-self-end"
             aria-label="Open menu"
           >
             <div className="border border-neutral-900 dark:border-neutral-100 p-2">

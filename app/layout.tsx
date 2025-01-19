@@ -24,7 +24,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="h-full flex flex-col bg-neutral-50 dark:bg-neutral-900">
-            <Navbar />
+            <header className="px-6 sticky top-0 w-full z-50 bg-neutral-50 dark:bg-neutral-900/80 backdrop-blur-xl">
+              {/* <ThemeToggle /> */}
+              <Navbar />
+            </header>
             <PageAnimation>
               {children}
             </PageAnimation>

@@ -1,3 +1,4 @@
+import { Project } from '@/components/ProjectsGrid';
 import { Code, Palette, LineChart } from 'lucide-react';
 
 export const siteConfig = {
@@ -64,7 +65,7 @@ export const servicesContent = {
 
 export const homeContent = {
   hero: {
-    title: '{Hello}',
+    title: '{Hello!}',
     subtitle: 'I am a highly technical <Software_Engineer /> with 9+ years experience. I care about crafting beautiful and exceptional digital experiences through innovative .',
     caption: 'Software Engineer & UX Expert'
   },
@@ -93,3 +94,20 @@ export const homeContent = {
     ]
   }
 } as const;
+
+export const projects: Project[] = [
+  { name: "Spritzi", slug: "spritzi" },
+  { name: "Teddy Baldassarre", slug: "teddy-baldassarre" },
+  { name: "UpClub", slug: "upclub" },
+  { name: "Ember Sauna", slug: "ember-sauna" },
+  { name: "Universal Diamonds", slug: "universal-diamonds" },
+  { name: "Blakesville Creamery", slug: "blakesville" },
+  { name: "CKF Painting", slug: "ckf-painting" },
+  { name: "GK Real Estate", slug: "gk-real-estate" },
+  { name: "Franklin Street", slug: "franklin-street" },
+  { name: "Deep Sounds", slug: "deep-sounds" },
+  { name: "Get To Know Me", slug: "/profile/details" },
+  { name: "Whatever", slug: "profile/whatever" },
+  { name: "Work Experience", slug: "profile/experience" },
+  { name: "Roles", slug: "profile/roles/product-designers" }
+];

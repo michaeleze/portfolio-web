@@ -8,14 +8,14 @@ import { FooterContact } from './FooterContact';
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-50 dark:bg-neutral-900 py-20">
+    <footer className="bg-neutral-50 dark:bg-neutral-900 py-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl md:max-w-6xl mx-auto px-4 bg-white dark:bg-neutral-800 rounded-[2rem] overflow-hidden"
+          className="max-w-2xl md:max-w-6xl mx-auto bg-white dark:bg-neutral-800 rounded-[2rem]"
         >
-          <div className="p-8 md:p-12 lg:p-16">
+          <div className="p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Brand Section */}
               <div className="flex flex-col">
