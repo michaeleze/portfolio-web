@@ -36,7 +36,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           className="grid items-center px-2 bg-neutral-70 dark:bg-neutral-900/80 backdrop-blur-xl"
         >
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-medium" onClick={onClose}>
+            <Link href="/" className="text-2xl font-medium border-none" onClick={onClose}>
               <MichaelLogo />
             </Link>
             <div className='self-center px-2 justify-self-end'>

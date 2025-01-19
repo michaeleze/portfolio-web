@@ -106,8 +106,8 @@ export const projects: Project[] = [
   { name: "GK Real Estate", slug: "gk-real-estate" },
   { name: "Franklin Street", slug: "franklin-street" },
   { name: "Deep Sounds", slug: "deep-sounds" },
-  { name: "Get To Know Me", slug: "/profile/details/michael" },
-  { name: "Skills", slug: "/profile/skills" },
+  { name: "Get To Know Me", slug: "profile/details/michael" },
+  { name: "Skills", slug: "profile/skills" },
   { name: "Whatever", slug: "profile/whatever" },
   { name: "Work Experience", slug: "profile/experience" },
   { name: "Roles", slug: "profile/roles/product-designers" }

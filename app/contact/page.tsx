@@ -1,12 +1,20 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { ContactHero } from '@/components/contact/ContactHero';
-import { ContactForm } from '@/components/contact/ContactForm';
-import PageAnimation from '@/components/PageAnimation';
+import { SocialLinks } from '@/components/contact/SocialLinks';
 
 export default function ContactPage() {
   return (
-      <div className="min-h-screen">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="min-h-screen bg-neutral-50 dark:bg-neutral-900 flex justify-center align-center"
+    >
+      <div>
         <ContactHero />
-        <ContactForm />
+        <SocialLinks />
       </div>
+    </motion.main>
   );
 }

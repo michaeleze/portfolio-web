@@ -15,7 +15,7 @@ export default function RolePage({ params }: { params: Usable<{ slug: string }>}
 
   return (
     <motion.div
-      className="mt-4"
+      className="mt-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

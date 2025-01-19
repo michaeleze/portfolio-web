@@ -18,7 +18,7 @@ export default function Navbar() {
           <nav className="">
             <div className="md:w-[calc(100%-2svw)] m-auto">
               <div className="mx-auto grid grid-cols-2 md:justify-around items-center">
-                <Link href="/" className="text-2xl font-medium">
+                <Link href="/" className="text-2xl font-medium border-none">
                   <MichaelLogo />
                 </Link>
 
